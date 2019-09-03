@@ -1,3 +1,11 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button>按钮</button>
+<!-- 1.小程序的数据绑定 {{}} -> mustache-->
+<view>Hello {{content}}</view>
+
+<!-- 2.列表展示 -->
+<view wx:for='{{movies}}' wx:key='index'>{{item}}</view>
+
+<!-- 3.修改数据 -->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bind:tap="increment">+</button>
+<button size="mini" bind:tap="decrement">-</button>
